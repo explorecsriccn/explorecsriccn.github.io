@@ -1,0 +1,28 @@
+# Dependencies
+markdown:         kramdown
+highlighter:      rogue
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: false
+
+# Setup
+# title:            Google exploreCSR 2023 @ IIT Roorkee
+title:            Google ExploreCSR
+tagline:          'Computer Science Research'
+description:      'Elevating Diversity in Computer Science Research: Bridging Gaps, Unlocking Potential'
+url:              http://explorecsriccn.github.io
+baseurl:          /
+
+author:
+  name:           'ICCN Lab'
+  url:            https://twitter.com/mdo
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+
+
+plugins: [jekyll-paginate]
