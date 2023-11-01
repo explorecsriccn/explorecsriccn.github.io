@@ -1,37 +1,430 @@
----
-layout: default
-title: Home
----
+<!doctype html>
+<html lang="en">
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&family=Poppins&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Google exploreCSR at IIT Roorkee</title>
+</head>
 
-    {{ post.content }}
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top header-bar py-3">
+    <div class="container-fluid ">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav mx-auto order-0">
+          <li class="nav-item"><a href="#about" class="nav-link text-light">About</a></li>
+          <li class="nav-item"><a href="#faculty" class="nav-link text-light">Faculty Mentors</a></li>
+          <li class="nav-item"><a href="#schedule" class="nav-link text-light">Program Schedule</a></li>
+          <li class="nav-item"><a href="#apply" class="nav-link text-light">How to Apply</a></li>
+          <li class="nav-item"><a href="#faq" class="nav-link text-light">FAQ</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link text-light">Contact</a></li>
+          <li class="nav-item"><a href="#acknowledgment" class="nav-link text-light">Acknowledgment</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="px-4 py-5 mt-5 text-center" id="hero">
+    <img class="d-block img-fluid mx-auto mb-4 pt-4" src="img/iccn_banner.png" alt="">
+    <h1 class="hero__heading py-3">exploreCSR 2023-2024: Computing Research</h1>
+    <div class="col-lg-6 mx-auto hero__text">
+      <p class="mb-4">Virtual Workshop Date: Jan 28th-29th, 2024 (Tentative).<br>
+        Virtual Research Internship Date: Feb 1st - May 30th (05 Months), 2024 (Tentative). <br>
+        Physical Workshop Date: Jun 15th-19th, 2024 (Tentative).      
+    </p>
+
+      <p class="mb-4 pb-1">Note:  Internship opportunities are limited and will be competitive, so we encourage early applications. We match internships based on the research interests indicated by those from low socioeconomic backgrounds in their application forms.
+
+      </p>
+      <!-- <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Apply Now</button>
+          </div> -->
+
+    </div>
   </div>
-  {% endfor %}
-</div>
 
-<!-- <div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div> -->
+  <!-- Welcome -->
+  <section class="bg-light pt-5">
+    <div class="px-4 pb-4 container ">
+      <h1 class="text-center pb-4">Welcome</h1>
+      <p>The Indian Institute of Technology Roorkee (IIT Roorkee), India, is thrilled to partner with Google Research to offer the ExploreCSR program, providing a valuable research experience for undergraduate students. We wholeheartedly encourage applications from students belonging to historically underrepresented groups, including women, first-generation college students, and those from low socioeconomic backgrounds.
+
+        Our main goal is to introduce students to the diverse aspects of computing research by engaging with faculty from various top-ranking institutes and universities. We aspire to instill confidence in them to pursue research careers, equip them with practical skills, and nurture a sense of belonging within the computing research community.
+        
+      </p>
+      <h4 class="pt-3">This workshop covers the following research areas:</h3>
+      <ul>
+        <li>Intelligent Transportation System</li>
+        <li>Networking</li>
+        <li>Computational Mathematics        </li>
+        <li>Machine Learning</li>
+        <li>Deep Learning</li>
+        <li>Computer Vision</li>
+        <li>Natural Language Processing</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section>
+    <div class="px-4 py-5 container" id="about">
+      <h1 class="text-center pb-4">About</h1>
+      <dl class="row">
+        <dt class="col-sm-3">Who can apply</dt>
+        <dd class="col-sm-9">Undergraduate students in their pre-final or final year are eligible to apply for this workshop. It will be held in both virtual and physical formats this year.</dd>
+
+        <dt class="col-sm-3">Experience needed</dt>
+        <dd class="col-sm-9">
+          No prior research experience is necessary to participate. However, having completed coursework in introductory computer science, calculus, linear algebra, and probability can be beneficial.
+        </dd>
+
+        <dt class="col-sm-3">Research activities</dt>
+        <dd class="col-sm-9">
+          <dl class="row">
+            <dd class="col-sm-9">(1) Workshop participants will be paired with one or two faculty mentors, along with their Teaching Assistant, who will guide them through the entire workshop and beyond.</dd>
+            <dd class="col-sm-9">(2) Various research projects are available, ranging from literature reviews to replicating prior work, enhancing existing research projects, or embarking on new independent research endeavors. Participants will have the opportunity to showcase their work through poster presentations at the end of June 2024 during the physical event. There is also the potential for extending and publishing these projects as short papers.
+</dd>
+          </dl>
+          <!-- <p>Multiple projects are available, including literature reviews, replications of prior work, improvements of
+            existing research projects, or new independent research projects. The internship participants will present
+            their work in posters at the end of July, 2021 and may extend to write and publish those into short papers.
+          </p> -->
+        </dd>
+
+        <dt class="col-sm-3 text-truncate">Time commitment</dt>
+        <dd class="col-sm-9">The workshop spans seven days, with three days conducted virtually, followed by four days taking place on the IIT Roorkee campus. During this event, 10-12 faculty members, each accompanied by their Teaching Assistant, will be actively involved in presenting and interacting with the students. We anticipate that research group meetings, mentor sessions, and project work will require a minimum commitment of 4 hours per week from the beginning to the end of the workshop.</dd>
+
+        <dt class="col-sm-3">Stipend</dt>
+        <dd class="col-sm-9">
+          To compensate for the opportunity cost incurred while attending the physical workshop, each participant will receive a stipend of up to 10,000 INR, as well as some additional goodies.
+
+        </dd>
+      </dl>
+    </div>
+  </section>
+
+
+  <!-- Faculty -->
+  <section class="px-4" id="faculty">
+    <section class="container">
+      <h1 class="text-center py-5 border-top">Faculty Mentors</h1>
+      <p class="text-center">Students enrolled in the program will receive guidance and mentorship from one of the following computer science faculty members hailing from various universities:</p>
+      <div class="row gx-5 gy-4 px-auto pt-3">
+        <div class="col-sm-12 col-md-6 col-lg-3 ">
+          <div class="card border-0 h-100">
+            <img src="./pics/p.singh.jpg" class="card-img-top mx-auto rounded-circle w-50" alt="...">
+
+            <div class="card-body bg-light-orange mt-2">
+              <h6 class="card-title text-center"><a target='_blank' href='https://sites.google.com/view/pravendra/?pli=1'>Prof. Pravendra Singh</a>
+              </h6>
+              <p class="card-text text-center"><a target='_blank' href='https://www.iitr.ac.in/'>IIT Roorkee</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 ">
+          <div class="card border-0 h-100">
+            <img src="./pics/r.sharma.jpg" class="card-img-top mx-auto rounded-circle w-50" alt="...">
+            <div class="card-body bg-light-orange mt-2">
+              <h6 class="card-title text-center"><a target='_blank' href='https://www.iitr.ac.in/~CSE/Raksha_Sharma'>Prof. Raksha Sharma              </a>
+              </h6>
+              <p class="card-text text-center"><a target='_blank' href='https://www.iitr.ac.in/'>IIT Roorkee</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 ">
+          <div class="card border-0 h-100">
+            <img src="./pics/DrPushpa.jpeg" class="card-img-top mx-auto rounded-circle w-50" alt="...">
+            <div class="card-body bg-light-orange mt-2">
+              <h6 class="card-title text-center"><a target='_blank'
+                  href='https://civil.iitr.ac.in/CE?Uid=pushpafce'>Prof. Pushpa Choudhary                </a></h6>
+                  <p class="card-text text-center"><a target='_blank' href='https://www.iitr.ac.in/'>IIT Roorkee</a></p>
+                </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 ">
+          <div class="card border-0 h-100">
+            <img src="./pics/ranveerrr.png" class="card-img-top mx-auto rounded-circle w-50" alt="...">
+            <div class="card-body bg-light-orange mt-2">
+              <h6 class="card-title text-center"><a target='_blank' href='https://ranveeriit.github.io/'>Prof. Ranveer Singh
+              </a></h6>
+              <p class="card-text text-center"><a
+                href="https://www.iiti.ac.in/">IIT Indore</a>
+            </p>            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-3 ">
+          <div class="card border-0 h-100">
+            <img src="./pics/chandresh.jpg" class="card-img-top mx-auto rounded-circle w-50" alt="...">
+            <div class="card-body bg-light-orange mt-2">
+              <h6 class="card-title text-center"><a target='_blank' href='https://chandreshiit.github.io/author/chandresh-kumar-maurya/'>Prof. Chandresh Kumar Maurya</a></h6>
+              <p class="card-text text-center"><a
+                  href="https://www.iiti.ac.in/">IIT Indore</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 ">
+          <div class="card border-0 h-100">
+            <img src="./pics/bharti.jpeg" class="card-img-top mx-auto rounded-circle w-50" alt="...">
+            <div class="card-body bg-light-orange mt-2">
+              <h6 class="card-title text-center"><a target='_blank'
+                  href='http://people.du.ac.in/~bharti/'>Prof. Bharti                </a></h6>
+              <p class="card-text text-center"><a href="https://www.du.ac.in/">University of Delhi</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 ">
+          <div class="card border-0 h-100">
+            <img src="./pics/picture_Meenakshi.jpeg" class="card-img-top mx-auto rounded-circle w-50" alt="...">
+            <div class="card-body bg-light-orange mt-2">
+              <h6 class="card-title text-center"><a target='_blank'
+                  href='https://meenakshirawat.com/'>Prof. Meenakshi Rawat</a></h6>
+              <p class="card-text text-center"><a 
+                href="https://www.iitr.ac.in/">IIT Roorkee</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 ">
+          <div class="card border-0 h-100">
+            <img src="./pics/karun-sir.png" class="card-img-top mx-auto rounded-circle w-50" alt="...">
+            <div class="card-body bg-light-orange mt-2">
+              <h6 class="card-title text-center"><a target='_blank' href='https://karunrawat.com/'>Prof. Karun Rawat</a>
+              </h6>
+              <p class="card-text text-center"><a
+                href="https://www.iitr.ac.in/">IIT Roorkee</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-3 ">
+          <div class="card border-0 h-100">
+            <img src="./pics/millie_pant2.jpg" class="card-img-top mx-auto rounded-circle w-50" alt="...">
+            <div class="card-body bg-light-orange mt-2">
+              <h6 class="card-title text-center"><a target='_blank' href='https://www.iitr.ac.in/~ASE/millifpt'>Prof. Millie Pant</a></h6>
+              <p class="card-text text-center"><a 
+                href="https://www.iitr.ac.in/">IIT Roorkee</a></p>
+              </p>
+            </div>
+          </div>
+        </div>
+       <!--  <div class="col-sm-12 col-md-6 col-lg-3 ">
+          <div class="card border-0 h-100">
+            <img src="./pics/j.wang.jpg" class="card-img-top mx-auto rounded-circle w-50" alt="...">
+            <div class="card-body bg-light-orange mt-2">
+              <h6 class="card-title text-center"><a target='_blank'
+                  href='https://www.cs.purdue.edu/homes/csjgwang/'>Jianguo Wang</a></h6>
+              <p class="card-text text-center"><a href="https://www.cs.purdue.edu/">Purdue University</a></p>
+            </div>
+          </div>
+        </div> -->
+        <div class="col-sm-12 col-md-6 col-lg-3 ">
+          <div class="card border-0 h-100">
+            <img src="./pics/neetesh.jpg" class="card-img-top mx-auto rounded-circle w-50" alt="...">
+            <div class="card-body bg-light-orange mt-2">
+              <h6 class="card-title text-center"><a target='_blank' href='https://neeteshkumar.netlify.app/'>Prof. Neetesh Kumar</a></h6>
+              <p class="card-text text-center"><a
+                  href="https://www.iitr.ac.in/">IIT Roorkee</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 ">
+          <div class="card border-0 h-100">
+            <img src="./pics/pradumn.jpg" class="card-img-top mx-auto rounded-circle w-50" alt="...">
+            <div class="card-body bg-light-orange mt-2">
+              <h6 class="card-title text-center"><a target='_blank' href='https://www.iitr.ac.in/~CSE/Pradumn_K__Pandey'>Prof. Pradumn K. Pandey</a></h6>
+              <p class="card-text text-center"><a
+                  href="https://www.iitr.ac.in/">IIT Roorkee</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </section>
+
+  <!-- Schedule -->
+  <section class="bg-light">
+    <div class="px-4 py-5  container" id="schedule">
+      <h1 class="text-center pb-4">Program Schedule</h1>
+      <p>Throughout the workshop and summer of 2021, participants will pursue their own research projects under the
+        guidance of their faculty.</p>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Event</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>April 1st</td>
+            <td>Application open</td>
+          </tr>
+          <tr>
+            <td>May 1st</td>
+            <td>Application deadline</td>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+
+  <!-- Apply -->
+  <section class="px-4 py-5 container" id="apply">
+    <h1 class="text-center pb-4">How to Apply</h1>
+    <p>To apply for the program, please fill out the <a href='https://forms.gle/rnLWxkHa32aRkybs9'>online
+        application form </a> by January 1 2024.<br></p>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-light">
+    <div class="px-4 py-5  container" id="faq">
+      <h1 class="text-center pb-4">FAQ</h1>
+      <div class="accordion" id="accordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              I am an undergraduate student in my final year; I will graduate in 2021. Am I eligible to apply?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Yes.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              I am an undergraduate student from [any university or college institution, any country]. Am I eligible to
+              apply?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Yes. Please note that UTRGV is on <strong>Central Time</strong>, many of our events will be in those
+              working
+              hours. In addition, stipend support may not work for people who are not in the US due to some constraints.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Is this program only for underrepresented groups?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              The goal of the exploreCSR program is to support underrepresented students to pursue computing research <a
+                href='https://research.google/outreach/explore-csr/'>(the program)</a>. Though we consider all
+              applicants,
+              we focus on this goal.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              I'm a high school student. Am I eligible to apply?
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Not this time.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              How much details should I put into the questions on the form, e.g., research interests?
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Short one paragraph is good. We would like to match you to the right people and projects.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingSix">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+              I didn't receive a confirmation of my application.
+            </button>
+          </h2>
+          <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              It should go through. If you're worried, please submit another one.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingSeven">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+              I submitted my form, but received the error. What should I do?
+            </button>
+          </h2>
+          <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              You should be able to get around this by filling out the form while logged into to a personal Google
+              account.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="px-4 py-5  container" id="contact">
+    <h1 class="text-center pb-4">Contact</h1>
+    <p>Please feel free to reach out to us at <a href = "mailto: iccnlab@gmail.com">iccnlab@gmail.com</a></p>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
+
+  <!-- Acknowledgment -->
+  <section class="px-4 py-5  container" id="acknowledgment">
+    <h1 class="text-center pb-4">Acknowledgment</h1>
+    <p>This work was funded by an unrestricted gift from Google.</p>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
