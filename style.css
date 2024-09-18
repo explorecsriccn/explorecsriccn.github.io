@@ -68,5 +68,28 @@ a:hover, a:focus {
     border-radius:50%;
 }
 
+  .px-4 py-5  container{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+  }
 
+  .px-4 py-5  container {
+    border: 1px solid #ddd;
+  }
 
+  .px-4 py-5  container{
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Full viewport height (optional) */
+  }
+
+  .px-4 py-5  container {
+    border: 1px solid #ddd;
+  }
+
+  
+
+  
